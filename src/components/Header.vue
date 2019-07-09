@@ -101,7 +101,7 @@
             pos() {
                 if (this.$route.path === "/index" || this.$route.path === "/")
                     return "1";
-                else if (this.$route.path === "/topic")
+                else if (this.$route.path === "/topics")
                     return "2";
                 else if (this.$route.path === "/following")
                     return "3";
@@ -137,7 +137,7 @@
                 if (value === '1') {
                     this.$router.push("/index")
                 } else if (value === '2') {
-                    this.$router.push("/topic")
+                    this.$router.push("/topics")
                 } else {
                     this.$router.push("/following")
                 }

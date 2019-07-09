@@ -2,7 +2,7 @@
     <div  class="topic_item">
             <img :src="topic_pic" class="picture">
             <div class="topic_text">
-                <p class="topic_name">{{topic_name}}</p>
+                <router-link :to="'/topic/' + topic_id"><p class="topic_name">{{topic_name}}</p></router-link>
                 <p class="topic_desc">{{description}}</p>
             </div>
     </div>
@@ -27,8 +27,10 @@
 
 <style scoped>
     .topic_item{
-        width:100%;
+        width:90%;
         height:100%;
+        margin: 25px 0;
+
     }
     .picture{
         float:left;
@@ -38,15 +40,20 @@
         margin-bottom:5%;
     }
     .topic_name{
-        font-size:25px;
+        font-size:18px;
         font-weight:bolder;
+        margin-top: -10px;
     }
     .topic_desc{
-        font-size:18px;
+        font-size:16px;
+        word-break: break-all;
     }
     .topic_text{
         text-align: left;
-        margin-left:20%;
+        margin-left:30%;
         padding:25px;
+    }
+    .topic_text a{
+        color: #1a1a1a;
     }
 </style>

@@ -69,10 +69,15 @@
                     let temp = response.data;
                     if (temp.success) {
                         this.hasMore = temp.hasMore;
-                        this.start = this.end;
-                        this.end = this.start + 10;
                         for (let i = 0; i < temp.data.length; i++) {
                             this.data.push(temp.data[i])
+                        }
+                        if (this.hasMore) {
+                            this.start = this.end;
+                            this.end = this.start + 10;
+                        } else {
+                            this.start = this.data.length;
+                            this.end = this.start + 10
                         }
                     } else {
                         this.$Message.error(temp.error);

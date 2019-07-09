@@ -2,9 +2,11 @@
     <div id="app">
         <Header/>
         <div style="height: 100px;"></div>
-        <RightNav v-if="exist"></RightNav>
-        <router-view>
-        </router-view>
+        <div class="main-content">
+            <RightNav v-if="exist"></RightNav>
+            <router-view>
+            </router-view>
+        </div>
     </div>
 
 </template>
@@ -22,8 +24,7 @@
         computed:{
             exist(){
                 let path = this.$route.path.split("/");
-                 return path[1] === "index" || path[1] === "following" || path[1] === "search" || path[1] === "topic" || path[1] === "";
-
+                 return path[1] === "index" || path[1] === "following" || path[1] === "search" || path[1] === "topics" || path[1] === "" ||path[1] === 'topic';
             }
         },
         beforeCreate() {
@@ -53,5 +54,8 @@
         background-color: #f6f6f6;
         color: #1a1a1a;
         font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
+    }
+    .main-content{
+        min-width: 1300px;
     }
 </style>
