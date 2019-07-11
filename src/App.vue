@@ -56,6 +56,6 @@
         font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
     }
     .main-content{
-        min-width: 1300px;
+        min-width: 1600px;
     }
 </style>

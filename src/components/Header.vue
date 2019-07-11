@@ -52,7 +52,7 @@
                                     <router-link to="/modify_password">修改密码</router-link>
                                 </DropdownItem>
                                 <DropdownItem>
-                                    <a @click="logout">注销</a>
+                                    <p @click="logouts">注销</p>
                                 </DropdownItem>
                             </DropdownMenu>
                         </Dropdown>
@@ -133,7 +133,7 @@
                         }
                     })
             },
-            logout() {
+            logouts() {
                 if (!this.isLogin) {
                     this.$Message.error("未登录");
                     this.$router.push("/login");
@@ -195,7 +195,11 @@
         },
         mounted() {
             this.get_self_info();
-            this.getTips()
+            setTimeout(()=>{
+                if (this.isLogin){
+                    this.getTips()
+                }
+            },100);
         }
     }
 </script>

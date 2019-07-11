@@ -3,6 +3,9 @@
         <li v-for="item in data" :key="item.userid">
             <FollowerItem :data="item"></FollowerItem>
         </li>
+        <Button long v-if="!data.length" class="hint" @click="getFollowers()">
+            还没有人哟, 请稍后再试...
+        </Button>
     </ul>
 </template>
 

@@ -137,7 +137,7 @@
         methods: {
             deleteAnswer(){
                 this.$Modal.confirm({
-                    title: 'Title',
+                    title: '确认要删除吗?',
                     content: '<p>您即将删除一个回答</p><p>删除后将不可恢复</p><p>确认要删除吗?</p>',
                     okText: '确认',
                     cancelText: '取消',
