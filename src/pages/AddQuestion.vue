@@ -2,7 +2,7 @@
     <div class="ask">
         <h1 style="color: #175199;">提问</h1>
         <Input type="text" prefix="ios-search" placeholder="填写你的问题" v-model.trim="question" class="input"
-               @on-blur="question_mark = question[question.length - 1] !=='?' || question[question.length - 1] !=='？' " @on-focus="question_mark=false"/>
+               @on-blur="question_mark = question[question.length - 1] !=='?' && question[question.length - 1] !=='？' " @on-focus="question_mark=false"/>
         <div style="height: 30px;line-height: 30px;color: #ed4014"><span v-show="question_mark">问题应该以问号结尾哟~</span></div>
         <Input type="textarea" :autosize="true" placeholder="请输入问题的描述" v-model="desc" class="input"
                style="margin-top: 10px"/>

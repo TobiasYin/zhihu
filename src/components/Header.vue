@@ -199,7 +199,7 @@
                 if (this.isLogin){
                     this.getTips()
                 }
-            },100);
+            },2000);
         }
     }
 </script>
